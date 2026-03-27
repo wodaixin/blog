@@ -7,15 +7,6 @@
 #icon = "home"
 #newtab = true
 
-[[main]]
-    identifier = "ai-business"
-    name = "AI 商业"
-    url = "/categories/ai-business/"
-
-    [main.params]
-        icon = "robot"
-#newtab = true
-
 [[social]]
     identifier = "github"
     name       = "GitHub"
