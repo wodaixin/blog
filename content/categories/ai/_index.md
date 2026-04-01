@@ -1,6 +1,6 @@
 ---
-title: ai-business
-description: ai-business
+title: ai
+description: ai
 image:
 
 # Badge style

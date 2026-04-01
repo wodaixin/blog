@@ -8,10 +8,10 @@
 #newtab = true
 
 [[main]]
-    identifier = "ai-business"
-    name = "AI 商业"
-    url = "/categories/ai-business/"
-    weight = 2
+    identifier = "ai"
+    name       = "AI"
+    url        = "/categories/ai/"
+    weight     = 2
 
     [main.params]
         icon = "robot"
@@ -31,3 +31,11 @@
 
     [social.params]
         icon = "brand-gmail"
+
+[[social]]
+    identifier = "wechat"
+    name       = "WeChat"
+    url        = "#wechat"
+
+    [social.params]
+        icon = "brand-wechat"
