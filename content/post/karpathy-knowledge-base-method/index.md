@@ -3,7 +3,6 @@ title: "卡帕西个人知识库构建方法分析"
 description: "深度分析Andrej Karpathy提出的AI驱动个人知识库构建方法。核心是从'记忆'到'检索'的范式转变，实现自动维护和循环增强机制，让知识库成为自我构建的第二大脑。"
 slug: karpathy-knowledge-base-method
 date: 2026-04-07
-image: image1.png
 categories:
     - AI
     - 技术
