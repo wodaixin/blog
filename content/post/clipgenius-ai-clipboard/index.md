@@ -3,6 +3,7 @@ title: "找不到好用的Linux剪贴板，我做了个带AI的开源版本"
 description: "从Windows迁移到Linux后，找不到满意的剪贴板工具。作为电商从业者，我需要频繁复制文案、图片、视频链接。于是在Google AI Studio的帮助下，我做了ClipGenius——一个支持智能分析、多模态聊天、云端同步的AI剪贴板管理器。"
 slug: clipgenius-ai-clipboard
 date: 2026-04-09
+image: cover.png
 categories:
     - AI
     - 技术
