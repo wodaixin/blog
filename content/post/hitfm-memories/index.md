@@ -12,11 +12,9 @@ tags:
     - 青春记忆
     - 电台
     - HitFM
-links:
-  - title: 原文链接
-    description: 知乎专栏 - 新音乐产业观察
-    website: https://zhuanlan.zhihu.com/p/1989452194987131130
 ---
+
+> 本文转载自：[知乎专栏 - 新音乐产业观察](https://zhuanlan.zhihu.com/p/1989452194987131130)
 
 
 2025年12月23日，Hit FM 停播了，一代人的时代记忆悄然落幕。

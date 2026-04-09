@@ -44,7 +44,7 @@ A Tool Wrapper gives your agent on-demand context for a specific library. Instea
 
 ![Generator](02-generator.jpg)
 
-
+```markdown
 # skills/api-expert/SKILL.md
 ---
 name: api-expert
