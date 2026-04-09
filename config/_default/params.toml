@@ -51,7 +51,22 @@ SortBy              = "default"
 ## Comments
 [comments]
     enabled  = true
-    provider = "disqus"
+    provider = "giscus"
+
+    [comments.giscus]
+        repo             = "wodaixin/blog"
+        repoID           = "R_kgDORyi0uw"
+        category         = "Announcements"
+        categoryID       = "DIC_kwDORyi0u84C6cen"
+        mapping          = "pathname"
+        lightTheme       = "light"
+        darkTheme        = "dark_dimmed"
+        reactionsEnabled = 1
+        emitMetadata     = 0
+        inputPosition    = "bottom"
+        lang             = "zh-CN"
+        strict           = 0
+        loading          = "lazy"
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
     # Copy the configurations you need from there and paste it here.
