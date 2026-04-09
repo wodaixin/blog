@@ -1,100 +1,109 @@
 <div id="wechat-modal" style="display:none; z-index: 10000; position: fixed; top: 0; left: 0; width: 100%; height: 100%;">
   
-  <div class="wechat-mask" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);"></div>
+  <div class="wechat-mask" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);"></div>
 
   <div class="wechat-box">
-    <span class="wechat-close">&times;</span>
+    <button class="wechat-close" aria-label="关闭">&times;</button>
     <img src="{{ "img/wechat.png" | relURL }}" alt="WeChat QR Code">
-    <p class="wechat-note">商务联系<br><span>（拒绝基础科普，请备注来意）</span></p>
+    <p class="wechat-note">请备注来意</p>
   </div>
 </div>
 
 <style>
-/* 弹窗核心样式 */
+/* 弹窗核心样式 - 使用主题卡片风格 */
 .wechat-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
-  padding: 30px 25px 20px;
-  border-radius: 12px;
+  background-color: var(--card-background);
+  padding: 60px 30px 30px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-l2);
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   animation: wechatFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  width: 280px;
+  width: 320px;
+  max-width: 90vw;
 }
 
-/* 关闭按钮 */
+/* 关闭按钮 - 符合主题按钮风格 */
 .wechat-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 26px;
-  color: #999;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  background: var(--card-background-selected);
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  color: var(--card-text-color-secondary);
   cursor: pointer;
   line-height: 1;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .wechat-close:hover {
-  color: #333;
+  background: var(--card-separator-color);
+  color: var(--card-text-color-main);
+  transform: scale(1.05);
 }
 
-/* 二维码图片控制 */
+/* 二维码图片 */
 .wechat-box img {
-  width: 200px;
-  height: auto;
+  width: 260px;
+  height: 260px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center 35%;
   border-radius: 8px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--card-separator-color);
+  box-shadow: var(--shadow-l1);
 }
 
-/* 防御性话术排版 */
+/* 提示文字 - 使用主题文字颜色 */
 .wechat-note {
-  margin-top: 16px;
-  font-size: 15px;
-  color: #333;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.wechat-note span {
-  display: block;
-  margin-top: 4px;
-  font-size: 12px;
-  color: #888;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--card-text-color-secondary);
   font-weight: normal;
+  line-height: 1.5;
 }
 
-/* 进场动画：略带缩放的从下往上浮现 */
+/* 进场动画 */
 @keyframes wechatFadeIn {
-  from { opacity: 0; transform: translate(-50%, -55%) scale(0.95); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  from { 
+    opacity: 0; 
+    transform: translate(-50%, -48%) scale(0.96); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translate(-50%, -50%) scale(1); 
+  }
 }
 
-/* --- 侧边栏微信图标的悬浮气泡优化 --- */
+/* 侧边栏微信图标悬浮提示 */
 a[href*="#wechat"] {
   position: relative;
 }
 
-/* 气泡本体 */
 a[href*="#wechat"]:hover::after {
   content: "深度交流";
   position: absolute;
   bottom: 130%;
   left: 50%;
   transform: translateX(-50%);
-  background: #222;
-  color: #fff;
+  background: var(--card-background);
+  color: var(--card-text-color-main);
   padding: 6px 12px;
   font-size: 12px;
   border-radius: 6px;
   white-space: nowrap;
   pointer-events: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-l1);
+  z-index: 1;
 }
 
-/* 气泡下方的小三角 */
 a[href*="#wechat"]:hover::before {
   content: "";
   position: absolute;
@@ -103,41 +112,58 @@ a[href*="#wechat"]:hover::before {
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: #222 transparent transparent transparent;
+  border-color: var(--card-background) transparent transparent transparent;
   pointer-events: none;
+  z-index: 1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .wechat-box {
+    width: 280px;
+    padding: 35px 20px 25px;
+  }
+  
+  .wechat-box img {
+    width: 220px;
+    height: 220px;
+  }
 }
 </style>
 
 <script>
-// 交互逻辑：纯原生，零依赖，极致加载
+// 交互逻辑
 document.addEventListener("DOMContentLoaded", function () {
   const wechatBtns = document.querySelectorAll('a[href*="#wechat"]');
   const modal = document.getElementById("wechat-modal");
+  
+  if (!modal) return;
+  
   const mask = modal.querySelector('.wechat-mask');
   const closeBtn = modal.querySelector('.wechat-close');
 
-  if (!modal) return;
-
-  // 1. 点击唤起弹窗
+  // 打开弹窗
   wechatBtns.forEach(btn => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       modal.style.display = "block";
+      document.body.style.overflow = "hidden"; // 防止背景滚动
     });
   });
 
-  // 2. 封装关闭动作
+  // 关闭弹窗
   const closeModal = () => {
     modal.style.display = "none";
+    document.body.style.overflow = ""; // 恢复滚动
   };
 
-  // 3. 点击遮罩层关闭
+  // 点击遮罩关闭
   mask.addEventListener("click", closeModal);
   
-  // 4. 点击右上角 X 关闭
+  // 点击关闭按钮
   closeBtn.addEventListener("click", closeModal);
   
-  // 5. 高管习惯：按键盘 ESC 键秒关
+  // ESC 键关闭
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.style.display === "block") {
       closeModal();
