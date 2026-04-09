@@ -19,7 +19,7 @@ SortBy              = "default"
 
 [sidebar]
     emoji    = ""
-    subtitle = "AI 商业演进路径的系统性观察与底层框架思考。"
+    subtitle = "AI 商业演进的底层框架与系统性观察"
     avatar   = "img/avatar.png"
 
 [article]
