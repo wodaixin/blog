@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/home/hitfm/blog/agent-skill-patterns",
+      "/home/hitfm/blog/assets/agent-skill-patterns"
+    ]
+  }
+}

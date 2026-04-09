@@ -10,7 +10,7 @@
 [[main]]
     identifier = "ai"
     name       = "AI"
-    url        = "/categories/ai/"
+    url        = "/categories/AI/"
     weight     = 2
 
     [main.params]
