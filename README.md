@@ -16,7 +16,7 @@
 
 ## 🛠️ 技术基石
 
-- **搭建框架**：[Hugo Stack](https://gohugo.io/hugo-modules/))
+- **搭建框架**：[Hugo Stack](https://gohugo.io/hugo-modules/)
 - **自动化流**：Node.js / Python 定制脚本
 - **知识管理**：构建个人“第二大脑”的实验场。
 
