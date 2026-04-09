@@ -2,9 +2,17 @@
 title: Links
 links:
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
+    description: 我的 GitHub 主页
+    website: https://github.com/wodaixin
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: Anthropic
+    description: Claude AI 的开发公司
+    website: https://www.anthropic.com
+    image: https://www.anthropic.com/images/icons/apple-touch-icon.png
+  - title: Hugo
+    description: 本站使用的静态网站生成器
+    website: https://gohugo.io
+    image: https://gohugo.io/img/hugo-logo.png
 menu:
     main: 
         weight: 4
@@ -14,20 +22,13 @@ menu:
 comments: false
 ---
 
-To use this feature, add `links` section to frontmatter.
+欢迎交换友链！如果你也有博客，可以通过以下方式联系我：
 
-This page's frontmatter:
+- GitHub: [@wodaixin](https://github.com/wodaixin)
+- 微信：点击侧边栏微信图标
 
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
+## 友链要求
 
-`image` field accepts both local and external images.
+- 内容积极向上
+- 网站可正常访问
+- 定期更新内容
