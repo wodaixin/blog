@@ -12,4 +12,4 @@ tags:
 
 ## 个人作品展示
 
-{{< video src="/videos/lv_0_20260512143644.mp4" controls="true" >}}
+{{< video src="/blog/videos/lv_0_20260512143644.mp4" controls="true" >}}
